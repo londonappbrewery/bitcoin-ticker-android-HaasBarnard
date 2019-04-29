@@ -80,6 +80,17 @@ public class MainActivity extends AppCompatActivity {
                 Log.d("Bitcoin", "JSON: " + response.toString());
 //                WeatherDataModel weatherData = WeatherDataModel.fromJson(response);
 //                updateUI(weatherData);
+
+                try
+                {
+                    String currency = response.getString("ask");
+                    Log.d("Bitcoin", "Ask: " + currency);
+
+                }
+                catch (JSONException e)
+                {
+                    e.printStackTrace();
+                }
             }
 
             @Override
